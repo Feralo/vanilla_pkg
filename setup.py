@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="vanilla-pkg",
-    version="0.0.1",
-    author="Example Author",
+    version="0.0.1.1",
+    author="Rollo Martins",
     author_email="author@example.com",
     description="A small example package",
     long_description=long_description,
