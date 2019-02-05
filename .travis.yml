@@ -5,8 +5,19 @@ matrix:
     env: TOXENV=py35
   - python: 3.6
     env: TOXENV=py36
-install: pip install tox
-script: tox
+
+install:
+  - sudo apt-get update
+    #- pip install tox
+  - sudo apt-get -y install python-dev python-pip
+  - python setup.py install
+  - pip install requests bs4 coveralls
+script:
+  #- tox
+  - nosetests  --with-coverage --cover-package=vanilla_pkg -v
+after_success: # Generate coverage reports only on success
+  - coveralls
+
 notifications:
   email: false
 deploy: # Runs on every commit to master branch
@@ -21,3 +32,13 @@ deploy: # Runs on every commit to master branch
     on:
         branch: master
         tags: false
+
+  # Runs only on tagged commits to master branch
+  - provider: pypi
+    user: geoncs
+    password:
+        secure: "noPasswordYet"
+    distributions: sdist bdist_wheel
+    on:
+        tags: true # Deploy only on tagged commits
+        branch: master
