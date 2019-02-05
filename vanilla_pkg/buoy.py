@@ -1,7 +1,6 @@
 import numpy as np
 from urllib.request import urlretrieve
 import logging
-logging.basicConfig(level=logging.DEBUG)
 
 
 URL = "https://www.ndbc.noaa.gov/data/realtime2/{}.data_spec"
@@ -10,14 +9,12 @@ DEST = "data/{}.data_spec"
 
 class Buoy:
     def __init__(self, identifier):
-        logging.debug("initializing buoy")
         self.identifier = identifier
         self.dates = []
         self.E = np.array([])
         self.f = np.array([])
 
     def get_data(self, dest=None):
-        logging.debug("calling get_data()")
         url = URL.format(self.identifier)
         if dest is None:
             dest = DEST.format(self.identifier)
@@ -57,7 +54,7 @@ class Buoy:
         return 4 * np.sqrt(product.sum(axis=1))
 
     def calc_midpoint(self, series):
-        nofirst = series[:, 1:]  # every element in a row, not the first
-        nolast = series[:, :-1]  # every element in a row, not the last
+        nofirst = series[:, 1:]
+        nolast = series[:, :-1]
         mid = 0.5 * (nolast + nofirst)
         return mid
