@@ -1,4 +1,5 @@
 from nose.tools import assert_raises
+import numpy as np
 import unittest
 import os
 
@@ -27,6 +28,6 @@ class Buoy_test(unittest.TestCase):
     def test_read_data(self):
         dest = self.buoy.get_data()
         E,f = self.buoy.read_data(dest)
-        assert type(E) == 'numpy.ndarray'
-        assert type(f) == 'numpy.ndarray'
+        assert isinstance(E,np.ndarray), "E is a numpy array"
+        assert isinstance(f,np.ndarray), "f is a numpy array"
 
