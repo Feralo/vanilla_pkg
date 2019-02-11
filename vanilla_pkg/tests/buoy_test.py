@@ -23,3 +23,10 @@ class Buoy_test(unittest.TestCase):
         path, dirs, files = next(os.walk(self.datadir))
         file_count = len(files)
         assert file_count > 0, "got the data file"
+
+    def test_read_data(self):
+        dest = self.buoy.get_data()
+        E,f = self.buoy.read_data(dest)
+        assert type(E) == 'numpy.ndarray'
+        assert type(f) == 'numpy.ndarray'
+
