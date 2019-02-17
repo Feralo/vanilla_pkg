@@ -8,12 +8,12 @@ matrix:
 
 install:
   - sudo apt-get update
-  - pip install tox
+    #- pip install tox
   - sudo apt-get -y install python-dev python-pip
   - python setup.py install
   - pip install requests bs4 coveralls
 script:
-  - tox
+  #- tox
   - nosetests  --with-coverage --cover-package=vanilla_pkg -v
 after_success: # Generate coverage reports only on success
   - coveralls
@@ -30,7 +30,7 @@ deploy: # Runs on every commit to master branch
 
     skip_existing: true
     on:
-        branch: tox
+        branch: master
         tags: false
 
   # Runs only on tagged commits to master branch
