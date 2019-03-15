@@ -5,8 +5,8 @@ import os
 
 from vanilla_pkg.buoy import Buoy
 
-class Buoy_test(unittest.TestCase):
 
+class Buoy_test(unittest.TestCase):
     @classmethod
     def setUp(self):
         cwd = os.getcwd()
@@ -27,7 +27,6 @@ class Buoy_test(unittest.TestCase):
 
     def test_read_data(self):
         dest = self.buoy.get_data()
-        E,f = self.buoy.read_data(dest)
-        assert isinstance(E,np.ndarray), "E is a numpy array"
-        assert isinstance(f,np.ndarray), "f is a numpy array"
-
+        E, f = self.buoy.read_data(dest)
+        assert isinstance(E, np.ndarray), "E is a numpy array"
+        assert isinstance(f, np.ndarray), "f is a numpy array"
