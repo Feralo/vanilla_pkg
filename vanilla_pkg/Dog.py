@@ -1,7 +1,7 @@
 class Dog:
-    
-    kind = 'canine'
-    
+
+    kind = "canine"
+
     def __init__(self, name):
         self.name = name
         self.tricks = []
