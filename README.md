@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/Feralo/vanilla_pkg/badge.svg?branch=master)](https://coveralls.io/github/Feralo/vanilla_pkg?branch=master)
 
 
-This is a simple class which takes borrows heavily from the examples in [the docs](https://docs.python.org/3/tutorial/classes.html) package, built process outlined in the [python.org](https://python.org) [packaging project tutorial](https://packaging.python.org/tutorials/packaging-projects/).
+This is a simple class which takes borrows heavily from the examples in [the docs](https://docs.python.org/3/tutorial/classes.html) package, built process outlined [python's](https://python.org) official [packaging project tutorial](https://packaging.python.org/tutorials/packaging-projects/).
 
 This is a place to prototype testing methods and build pipelines.
 
