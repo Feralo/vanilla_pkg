@@ -3,7 +3,8 @@ from nose.tools import assert_true, assert_is_not_none
 
 from vanilla_pkg import get_todos
 
-@patch('vanilla_pkg.Mocks.requests.get')
+
+@patch("vanilla_pkg.Mocks.requests.get")
 def test_request_response(mock_get):
     mock_get.return_value.ok = True
 

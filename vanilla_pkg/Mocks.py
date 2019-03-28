@@ -7,9 +7,9 @@ except ImportError:
 # Third-party imports...
 import requests
 
-BASE_URL = 'http://jsonplaceholder.typicode.com'
+BASE_URL = "http://jsonplaceholder.typicode.com"
 
-TODOS_URL = urljoin(BASE_URL, 'todos')
+TODOS_URL = urljoin(BASE_URL, "todos")
 
 
 def get_todos():
