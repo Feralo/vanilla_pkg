@@ -1,8 +1,5 @@
 # Standard library imports...
-try:
-    from urllib.parse import urljoin
-except ImportError:
-    from urlparse import urljoin
+from urllib.parse import urljoin
 
 # Third-party imports...
 import requests
