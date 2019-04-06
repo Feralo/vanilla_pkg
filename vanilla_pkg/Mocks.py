@@ -1,7 +1,4 @@
-# Standard library imports...
 from urllib.parse import urljoin
-
-# Third-party imports...
 import requests
 
 BASE_URL = "http://jsonplaceholder.typicode.com"
