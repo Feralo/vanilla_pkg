@@ -11,3 +11,5 @@ Unit tests reside in the **test** subdirectory of the vanilla_pkg directory.
 
 Tests can be run with:
      `pytest -v --cov=vanilla_pkg`
+
+Building of a conda package can be done by following [the user guide for uploading packages] (http://docs.anaconda.com/anaconda-cloud/user-guide/tasks/work-with-packages/#uploading-packages).
