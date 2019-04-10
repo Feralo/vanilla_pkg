@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/Feralo/vanilla_pkg.svg?branch=master)](https://travis-ci.org/Feralo/vanilla_pkg)
 [![Coverage Status](https://coveralls.io/repos/github/Feralo/vanilla_pkg/badge.svg?branch=master)](https://coveralls.io/github/Feralo/vanilla_pkg?branch=master)
 
-## Pypi package
+## PyPI
 This is a simple class which takes borrows heavily from the examples in [the docs](https://docs.python.org/3/tutorial/classes.html) package, built process outlined [python's](https://python.org) official [packaging project tutorial](https://packaging.python.org/tutorials/packaging-projects/).
 
 ## Testing
